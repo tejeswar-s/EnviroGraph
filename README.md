@@ -1,4 +1,4 @@
-# MindWebs Dashboard
+# EnviroGraph Dashboard
 
 A comprehensive React TypeScript dashboard that visualizes dynamic weather data over an interactive map with timeline controls and polygon drawing capabilities.
 
@@ -163,13 +163,49 @@ src/
 
 This project is licensed under the MIT License.
 
+## Deployment
+
+### Deploy to Render
+
+This project is ready for deployment on Render.com:
+
+1. **Fork/Clone the repository**
+2. **Connect to Render:**
+   - Go to [Render.com](https://render.com)
+   - Create a new Web Service
+   - Connect your GitHub repository: `https://github.com/tejeswar-s/EnviroGraph`
+3. **Configure deployment:**
+   - Build Command: `npm ci && npm run build`
+   - Start Command: `npm start`
+   - Environment: `Node`
+   - Plan: `Free`
+4. **Deploy:** Render will automatically build and deploy your app
+
+The `render.yaml` file is included for automatic configuration.
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Serve production build locally
+npm start
+```
+
 ## Future Enhancements
 
 - [ ] Additional data sources (humidity, pressure, wind speed)
-- [ ] Polygon labeling and renaming
-- [ ] Data export functionality
-- [ ] Advanced polygon editing (vertex manipulation)
-- [ ] Mobile-responsive optimizations
-- [ ] State persistence across page reloads
-- [ ] Animation effects for timeline and polygon updates
-- [ ] Tooltip system for enhanced user guidance
+- [ ] Polygon labeling and tooltips
+- [ ] State persistence across sessions
+- [ ] Animation effects for timeline changes
+- [ ] Mobile responsive design
+- [ ] Export functionality for polygons and data
+- [ ] Advanced filtering and search capabilities
+- [ ] Real-time data streaming for enhanced user guidance
