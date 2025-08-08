@@ -1,0 +1,129 @@
+/* Global styles for the MindWebs Dashboard */
+
+.App {
+  text-align: center;
+}
+
+/* Leaflet map container fixes */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom timeline slider styles */
+.timeline-slider {
+  margin: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ant-layout-content {
+    padding: 12px !important;
+  }
+  
+  .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  /* Stack map and sidebar vertically on mobile */
+  .ant-row .ant-col:nth-child(2) {
+    order: 2;
+  }
+  
+  .ant-row .ant-col:nth-child(3) {
+    order: 1;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ant-layout-header {
+    padding: 0 12px !important;
+  }
+  
+  .ant-layout-header h2 {
+    font-size: 18px !important;
+  }
+  
+  /* Make statistics cards stack on very small screens */
+  .ant-col-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+/* Custom polygon drawing cursor */
+.leaflet-container.drawing-mode {
+  cursor: crosshair !important;
+}
+
+/* Sidebar scrollbar styling */
+.sidebar-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Loading overlay */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Color picker custom styles */
+.ant-color-picker-trigger {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+/* Timeline range slider custom styles */
+.timeline-range {
+  padding: 0 12px;
+}
+
+/* Map controls positioning */
+.map-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Polygon hover effects */
+.leaflet-interactive:hover {
+  stroke-width: 3px !important;
+  stroke-opacity: 1 !important;
+}
+
+/* Statistics cards hover effect */
+.stats-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
